@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+html,
+body {
+    width: 100vw;
+    background: var(--bg-cyan);
+    height: 100vh;
+}
+
+:root {
+    --dark-cyan: hsl(180, 29%, 50%);
+    --bg-cyan: hsl(180, 52%, 96%);
+    --filter-cyan: hsl(180, 31%, 95%);
+    --dark-gray-cyan: hsl(180, 8%, 52%);
+    --very-dark-cyan: hsl(180, 14%, 20%);
+    --shadow: 0 5px 30px 10px hsl(180, 29%, 50%, .2);
+}
+
+header {
+    width: 100%;
+    height: 20%;
+    background-color: var(--dark-cyan);
+    position: relative;
+    margin-bottom: 60px;
+}
+
+header img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: fit-content;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.container {
+    width: 880px;
+    height: 125px;
+    background-color: white;
+    margin: 20px auto;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    box-shadow: var(--shadow);
+    transform: scale(1);
+    transition: all 0.9s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-cyan);
+}
+
+.new {
+    border-radius: 20px;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0 7px;
+    color: white;
+    background-color: var(--dark-cyan);
+
+}
+
+.featured {
+    border-radius: 20px;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0px;
+    color: white;
+    background-color: var(--very-dark-cyan);
+}
+
+.position {
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight:600;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.position:hover {
+    color: var(--dark-cyan);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    margin: 3px 15px;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: var(--dark-gray-cyan);
+}
+
+.tags_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    max-width: 50%;
+    gap: 20px;
+}
+
+.tag {
+
+    padding: 7px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--filter-cyan);
+    color: var(--dark-cyan);
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.tag:hover {
+    color: var(--filter-cyan);
+    background-color: var(--dark-cyan);
+}
+
+.filters_div {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -47%;
+    width: 880px;
+    height: 70px;
+    overflow-y: scroll;
+    background-color: white;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    border: 10px;
+}
+
+.filters_wrapper div {
+    background: var(--filter-cyan);
+    color: var(--dark-cyan);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25px;
+    justify-content: space-between;
+    padding-left: 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    gap: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.filters_div div button {
+    border-radius: 0 3px 3px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: var(--dark-cyan);
+}
+
+.filters_div div button img {
+    width: 10px;
+    height: auto;
+}
+
+
+.filters_div div button:hover {
+    background-color: var(--very-dark-cyan);
+}
+
+.clearBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--dark-cyan);
+}
+
+.filters_wrapper {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media (max-width:970px) {
+
+    html,
+    body {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    header img {
+       width: auto;
+       height: auto;
+    }
+
+    .container {
+        width: 95%;
+        height: fit-content;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        position: relative;
+        gap: 10px;
+        margin-bottom: 60px;
+    }
+
+    .content {
+        border-bottom: 1px solid var(--dark-cyan);
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .filters_div {
+        width: 95%;
+    }
+
+    .tags_div {
+        margin-left: 0;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        margin-top: -5%;
+        margin-left: 15px;
+    }
+
+    .position {
+        margin: 10px 0;
+    }
+}
